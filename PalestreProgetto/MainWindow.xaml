@@ -1,0 +1,55 @@
+﻿<Window x:Class="PalestreProgetto.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PalestreProgetto"
+        mc:Ignorable="d"
+        Title="Manager Palestre" Height="450" Width="600" MouseDown="ClearTextBox">
+    <Grid>
+ 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="30" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="30" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="150" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+        <Label Content="Lista Palestre" Grid.Row="1" Grid.Column="2"/>
+        <Label Content="Attrezzi in Palestra" Grid.Row="1" Grid.Column="4"/>
+        <Label Content="Tutti gli Attrezzi" Grid.Row="1" Grid.Column="6"/>
+        <ListBox x:Name="listPalestre" Grid.Row="2" Grid.Column="2" SelectionChanged="listPalestre_SelectionChanged" Height="150" VerticalAlignment="Top"/>
+        <ListBox x:Name="attrezziList" Grid.Row="2" Grid.Column="4" Height="150" VerticalAlignment="Top"/>
+        <ListBox x:Name="tuttiGliAttrezziList" Grid.Row="2" Grid.Column="6" SelectionChanged="listAttrezzi_SelectionChanged" Height="280" Grid.RowSpan="7" VerticalAlignment="Top"/>
+        <Button Content="Cancella Palestra" Grid.Row="4" Grid.Column="2" Width="150" Click="CancellaPalestra_Click" />
+        <Button Content="Aggiungi Palestra" Grid.Row="9" Grid.Column="2" Width="150" Click="AggiungiPalestra_Click" />
+        <Button Content="Aggiorna Palestra" Grid.Row="11" Grid.Column="2" Width="150" Click="AggiornaPalestra_Click" />
+        <Button Content="Aggiungi Attrezzo" Grid.Row="9" Grid.Column="4" Width="130" Click="AggiungiAttrezzo_Click" />
+        <Button Content="Aggiorna Attrezzo" Grid.Row="11" Grid.Column="4"  Width="130" Click="AggiornaAttrezzo_Click" />
+        <Button Content="Rimuovi Attrezzo" Grid.Row="4" Grid.Column="4" Width="130" Click="RimuoviAttrezzoDaPalestra_Click" />
+        <Button Content="Cancella Attrezzo" Grid.Row="11" Grid.Column="6" Width="130" Click="CancellaAttrezzo_Click" />
+        <Button Content="Aggiungi alla Palestra" Grid.Row="9" Grid.Column="6" Width="130" Click="AggiungiAttrezzoAllaPalestra_Click" />
+        <TextBox x:Name="MyTextBox" Grid.Row="6" Grid.Column="2" Height="80" Grid.RowSpan="3" Grid.ColumnSpan="3" VerticalAlignment="Top"/>
+    </Grid>
+    
+</Window>
